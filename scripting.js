@@ -83,4 +83,7 @@ function game() {
 
     console.log(playRound(playerSelection, computerSelection));
 }
-game();
+
+for (let i = 0; i <= 4; i++) {
+    game();
+  }
