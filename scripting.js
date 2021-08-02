@@ -10,25 +10,25 @@ function game() {
         return randomOption;
     }
     const computerSelection = computerPlay();
-//    const computerSelection = 'rock';
 
 
     let playerSelection = prompt('Rock, paper, or scissors?');
-    playerSelection = playerSelection.toLowerCase();    
-    console.log(playerSelection);
-
-    
-//    playerSelection = 'paper';
+    // if prompt is cancelled, exit the function
+    if (playerSelection === null) {
+        return;
+    }
+    // else, convert it to lowercase and continue on
+    playerSelection = playerSelection.toLowerCase();
 
     // if a nonviable option is entered, show an error msg
     if (
-    (playerSelection !== 'rock')
-    && (playerSelection !== 'scissors')
-    && (playerSelection !== 'paper')
+        (playerSelection !== 'rock')
+        && (playerSelection !== 'scissors')
+        && (playerSelection !== 'paper')
     ) {
         alert('that is not an option! pick again.');
         prompt('Rock, paper, or scissors?');
-    }
+    } 
 
     function computerPlay() {
         // define the available options (rock, paper, and scissors)
@@ -37,7 +37,8 @@ function game() {
         let randomOption = options[Math.floor(Math.random() * options.length)];
         return randomOption;
     }
-
+    // compares the player and cpu selections and determines a winner
+    // adds to winner's point total
     function playRound(playerSelection, computerSelection) {
 
         if (
@@ -80,25 +81,22 @@ function game() {
             console.log('You tied. Play again!');
         }
     }
-
+    // run playRound with relevant parameters
     playRound(playerSelection, computerSelection);
 }
-
+//loop parameter 5 times
 for (let i = 0; i <= 4; i++) {
     game();
-  }
+}
 
-console.log(playerPoints);
-console.log(computerPoints);
-
-if(playerPoints > computerPoints) {
+if (playerPoints > computerPoints) {
     console.log('You won :D ' + playerPoints + ' points earned.')
 }
 
-if(playerPoints < computerPoints) {
+if (playerPoints < computerPoints) {
     console.log('You lost :( ' + playerPoints + ' points earned.')
 }
 
-if(playerPoints = computerPoints) {
+if (playerPoints = computerPoints) {
     console.log('You tied :| ' + playerPoints + ' points earned.')
 }
