@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = 'paper';
-let computerSelection = computerPlay();
+const playerSelection = 'paper';
+const computerSelection = computerPlay();
 
 console.log(playRound(playerSelection, computerSelection));
