@@ -81,9 +81,12 @@ function game() {
         }
     }
 
-    console.log(playRound(playerSelection, computerSelection));
+    playRound(playerSelection, computerSelection);
 }
 
 for (let i = 0; i <= 4; i++) {
     game();
   }
+
+console.log(playerPoints);
+console.log(computerPoints);
