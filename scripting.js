@@ -46,6 +46,16 @@ function game() {
 let playerSelection = prompt('Rock, paper, or scissors?');
     playerSelection = playerSelection.toLowerCase();    
     console.log(playerSelection);
+    
+    // if a nonviable option is entered, show an error msg
+    if (
+    (playerSelection !== 'rock')
+    && (playerSelection !== 'scissors')
+    && (playerSelection !== 'paper')
+    ) {
+        alert('that is not an option! pick again.');
+        prompt('Rock, paper, or scissors?');
+    }
 
 const computerSelection = computerPlay();
 
