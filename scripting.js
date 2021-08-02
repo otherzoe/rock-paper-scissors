@@ -6,7 +6,6 @@ function computerPlay() {
     return randomOption;
 }
 let playerWon = 0;
-let computerWon = 0;
 function game() {
 
     let computerWon;
@@ -29,6 +28,14 @@ function game() {
     ) {
         alert('that is not an option! pick again.');
         prompt('Rock, paper, or scissors?');
+    }
+
+    function computerPlay() {
+        // define the available options (rock, paper, and scissors)
+        let options = ['rock', 'paper', 'scissors'];
+        // randomly select an option
+        let randomOption = options[Math.floor(Math.random() * options.length)];
+        return randomOption;
     }
 
     function playRound(playerSelection, computerSelection) {
@@ -69,6 +76,6 @@ function game() {
         }
     }
 
-    playRound();
+    console.log(playRound(playerSelection, computerSelection));
 }
 game();
