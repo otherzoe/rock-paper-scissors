@@ -90,3 +90,15 @@ for (let i = 0; i <= 4; i++) {
 
 console.log(playerPoints);
 console.log(computerPoints);
+
+if(playerPoints > computerPoints) {
+    console.log('You won :D ' + playerPoints + ' points earned.')
+}
+
+if(playerPoints < computerPoints) {
+    console.log('You lost :( ' + playerPoints + ' points earned.')
+}
+
+if(playerPoints = computerPoints) {
+    console.log('You tied :| ' + playerPoints + ' points earned.')
+}
