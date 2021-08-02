@@ -7,7 +7,6 @@ function computerPlay() {
 }
 let playerWon = 0;
 let computerWon = 0;
-
 function game() {
 
     let computerWon;
@@ -71,6 +70,5 @@ function game() {
     }
 
     playRound();
-    console.log(playRound(playerSelection, computerSelection));
 }
 game();
