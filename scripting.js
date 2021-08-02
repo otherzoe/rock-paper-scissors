@@ -3,8 +3,7 @@ function computerPlay() {
     let options = ['rock', 'paper', 'scissors'];
     // randomly select an option
     let randomOption = options[Math.floor(Math.random() * options.length)];
-    // log for debugging purposes
-    console.log(randomOption);
+    return randomOption;
 }
 
 function playRound(playerSelection, computerSelection) {
