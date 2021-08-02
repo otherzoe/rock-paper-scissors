@@ -1,25 +1,24 @@
-function computerPlay() {
-    // define the available options (rock, paper, and scissors)
-    let options = ['rock', 'paper', 'scissors'];
-    // randomly select an option
-    let randomOption = options[Math.floor(Math.random() * options.length)];
-    return randomOption;
-}
 let playerPoints = 0;
 let computerPoints = 0;
+
 function game() {
+    function computerPlay() {
+        // define the available options (rock, paper, and scissors)
+        let options = ['rock', 'paper', 'scissors'];
+        // randomly select an option
+        let randomOption = options[Math.floor(Math.random() * options.length)];
+        return randomOption;
+    }
+    const computerSelection = computerPlay();
+//    const computerSelection = 'rock';
 
-    let computerWon;
-//    const computerSelection = computerPlay();
-    const computerSelection = 'rock';
 
-    /* correct code, hidden for debugging 
     let playerSelection = prompt('Rock, paper, or scissors?');
     playerSelection = playerSelection.toLowerCase();    
     console.log(playerSelection);
-    */
+
     
-    playerSelection = 'paper';
+//    playerSelection = 'paper';
 
     // if a nonviable option is entered, show an error msg
     if (
@@ -75,7 +74,7 @@ function game() {
             (playerSelection === 'scissors')
             && (computerSelection === 'paper')
         ) {
-            console.log('You win! Paper beats scissors!');
+            console.log('You win! Scissors beats paper!');
             computerPoints = ++computerPoints;
         } else {
             console.log('You tied. Play again!');
