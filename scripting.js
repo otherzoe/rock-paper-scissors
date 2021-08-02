@@ -5,7 +5,8 @@ function computerPlay() {
     let randomOption = options[Math.floor(Math.random() * options.length)];
     return randomOption;
 }
-let playerWon = 0;
+let playerPoints = 0;
+let computerPoints = 0;
 function game() {
 
     let computerWon;
@@ -45,32 +46,37 @@ function game() {
             && (computerSelection === 'rock')
         ) {
             console.log('You win! Paper beats rock!');
-            playerWon = ++playerWon;
+            playerPoints = ++playerPoints;
         } else if (
             (playerSelection === 'paper')
             && (computerSelection === 'scissors')
         ) {
             console.log('You lose! Scissors beats paper!');
+            computerPoints = ++computerPoints;
         } else if (
             (playerSelection === 'rock')
             && (computerSelection === 'paper')
         ) {
             console.log('You lose! Paper beats rock!');
+            computerPoints = ++computerPoints;
         } else if (
             (playerSelection === 'rock')
             && (computerSelection === 'scissors')
         ) {
             console.log('You win! Rock beats scissors!');
+            playerPoints = ++playerPoints;
         } else if (
             (playerSelection === 'scissors')
             && (computerSelection === 'rock')
         ) {
             console.log('You lose! Rock beats scissors!');
+            computerPoints = ++computerPoints;
         } else if (
             (playerSelection === 'scissors')
             && (computerSelection === 'paper')
         ) {
             console.log('You win! Paper beats scissors!');
+            computerPoints = ++computerPoints;
         } else {
             console.log('You tied. Play again!');
         }
